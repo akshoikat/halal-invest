@@ -37,130 +37,149 @@
   </style>
 </head>
 <body>
-    <header class="w-full border-b border-gray-200">
-   <!-- Top bar -->
-   <div class="max-w-screen-xl mx-auto flex items-center justify-between px-6 py-3 text-sm font-semibold text-gray-700">
-    <div class="flex items-center space-x-10">
-     <a class="flex items-center" href="#">
-      <img alt="Khaas Food logo in green text with a leaf icon" class="h-10 w-auto" height="40" src="https://storage.googleapis.com/a1aa/image/190a836f-6b1b-4467-b856-ec9afeccae81.jpg" width="150"/>
-     </a>
-     <nav class="hidden sm:flex space-x-8">
-      <a class="hover:underline" href="#">
-       HOME
+<header class="w-full border-b border-gray-200">
+  <!-- Top Bar -->
+  <div class="max-w-screen-xl mx-auto flex items-center justify-between px-4 sm:px-6 py-3 text-sm font-semibold text-gray-700">
+    <!-- Logo + Toggle -->
+    <div class="flex items-center justify-between w-full sm:w-auto">
+      <a href="#" class="flex items-center">
+        <img src="https://storage.googleapis.com/a1aa/image/190a836f-6b1b-4467-b856-ec9afeccae81.jpg" alt="Logo" class="h-10 w-auto">
       </a>
-      <a class="hover:underline" href="#">
-       PRODUCTS
-      </a>
-      <a class="hover:underline" href="#">
-       CORPORATE
-      </a>
-      <a class="hover:underline" href="#">
-       EXPORT
-      </a>
-      <a class="hover:underline" href="#">
-       OUTLETS
-      </a>
-      <a class="hover:underline" href="#">
-       IMPACT STORIES
-      </a>
-      <a class="hover:underline" href="#">
-       HALAL INVESTMENT
-      </a>
-      <a class="hover:underline" href="#">
-       BLOG
-      </a>
-     </nav>
+      <button id="mobile-menu-toggle" class="sm:hidden text-gray-700 text-xl focus:outline-none">
+        <i class="fas fa-bars"></i>
+      </button>
     </div>
-    <div class="flex items-center space-x-6">
-     <a class="flex items-center" href="#">
-      <img alt="Get it on Google Play badge" class="h-10 w-auto" height="40" src="https://storage.googleapis.com/a1aa/image/90524643-4b79-430b-05bd-609ccdb9f51d.jpg" width="100"/>
-     </a>
+
+    <!-- Navigation (Desktop) -->
+    <nav class="hidden sm:flex space-x-4 lg:space-x-6 ml-4">
+      <a href="#" class="hover:underline">HOME</a>
+      <a href="#" class="hover:underline">PRODUCTS</a>
+      <a href="#" class="hover:underline">CORPORATE</a>
+      <a href="#" class="hover:underline">EXPORT</a>
+      <a href="#" class="hover:underline">OUTLETS</a>
+      <a href="#" class="hover:underline">IMPACT STORIES</a>
+      <a href="#" class="hover:underline">HALAL INVESTMENT</a>
+      <a href="#" class="hover:underline">BLOG</a>
+    </nav>
+
+    <!-- Google Play (Hidden on Mobile) -->
+    <div class="hidden sm:flex items-center">
+      <a href="#">
+        <img src="https://storage.googleapis.com/a1aa/image/90524643-4b79-430b-05bd-609ccdb9f51d.jpg" alt="Google Play" class="h-10 w-auto">
+      </a>
     </div>
-   </div>
-   <!-- Bottom bar -->
-   <div class="max-w-screen-xl mx-auto flex items-center px-6 py-3 space-x-5">
-    <button class="hidden sm:flex items-center bg-[#7BAF1B] text-white text-sm font-semibold px-5 py-3 rounded-md hover:bg-[#6a9e17]" type="button">
-     <i class="fas fa-bars mr-3 text-lg">
-     </i>
-     BROWSE CATEGORIES
-     <i class="fas fa-chevron-down ml-3 text-sm">
-     </i>
+  </div>
+
+  <!-- Mobile Nav -->
+  <div id="mobile-nav" class="sm:hidden hidden px-4 pb-3">
+    <nav class="flex flex-col space-y-2 text-sm font-semibold text-gray-700">
+      <a href="#" class="hover:underline">HOME</a>
+      <a href="#" class="hover:underline">PRODUCTS</a>
+      <a href="#" class="hover:underline">CORPORATE</a>
+      <a href="#" class="hover:underline">EXPORT</a>
+      <a href="#" class="hover:underline">OUTLETS</a>
+      <a href="#" class="hover:underline">IMPACT STORIES</a>
+      <a href="#" class="hover:underline">HALAL INVESTMENT</a>
+      <a href="#" class="hover:underline">BLOG</a>
+    </nav>
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="max-w-screen-xl mx-auto flex flex-wrap gap-3 sm:gap-5 items-center px-4 sm:px-6 py-3">
+    <!-- Browse Categories -->
+    <button class="hidden sm:flex items-center bg-[#7BAF1B] text-white text-sm font-semibold px-4 py-2 rounded-md hover:bg-[#6a9e17]">
+      <i class="fas fa-bars mr-2"></i>
+      BROWSE CATEGORIES
+      <i class="fas fa-chevron-down ml-2"></i>
     </button>
-    <button class="flex items-center bg-[#C80014] text-white text-sm font-semibold px-5 py-3 rounded-md hover:bg-[#a30010]" type="button">
-     <i class="fas fa-bullhorn mr-3 text-lg">
-     </i>
-     OFFER
+
+    <!-- Offer -->
+    <button class="flex items-center bg-[#C80014] text-white text-sm font-semibold px-4 py-2 rounded-md hover:bg-[#a30010]">
+      <i class="fas fa-bullhorn mr-2"></i>
+      OFFER
     </button>
-    <form class="flex flex-1 max-w-2xl border border-[#7BAF1B] rounded-md overflow-hidden text-sm">
-     <input class="flex-grow px-5 py-3 text-sm text-[#7BAF1B] placeholder-[#7BAF1B] focus:outline-none" placeholder="Search for products" type="search"/>
-     <button aria-label="Search" class="px-5 py-3 text-[#7BAF1B] hover:text-[#5a7f13]" type="submit">
-      <i class="fas fa-search text-lg">
-      </i>
-     </button>
+
+    <!-- Search -->
+    <form class="flex flex-1 min-w-[220px] border border-[#7BAF1B] rounded-md overflow-hidden text-sm">
+      <input type="search" placeholder="Search products" class="flex-grow px-3 py-2 text-[#7BAF1B] placeholder-[#7BAF1B] focus:outline-none" />
+      <button type="submit" class="px-4 py-2 text-[#7BAF1B] hover:text-[#5a7f13]">
+        <i class="fas fa-search text-base"></i>
+      </button>
     </form>
-    <a class="flex items-center hover:underline text-sm font-semibold" href="#">
-     <i class="fas fa-user mr-2 text-base"></i>LOGIN / REGISTER
+
+    <!-- Login -->
+    <a href="#" class="flex items-center hover:underline text-sm font-semibold">
+      <i class="fas fa-user mr-2"></i>LOGIN / REGISTER
     </a>
-    <a class="flex items-center hover:underline text-sm font-semibold" href="#">
-     <i class="fas fa-shopping-cart mr-2 text-base"></i>0</a>
-   </div>
-  </header>
+
+    <!-- Cart -->
+    <a href="#" class="flex items-center hover:underline text-sm font-semibold">
+      <i class="fas fa-shopping-cart mr-2"></i>0
+    </a>
+  </div>
+</header>
+
+<!-- Mobile Menu Toggle Script -->
+<script>
+  document.getElementById('mobile-menu-toggle').addEventListener('click', () => {
+    const menu = document.getElementById('mobile-nav');
+    menu.classList.toggle('hidden');
+  });
+</script>
 
 
 
 
-  <section class="relative bg-[#00303F] overflow-hidden">
-    <img
-      alt="Green world map background image"
-      aria-hidden="true"
-      class="absolute inset-0 w-full h-full object-cover opacity-30"
-      height="400"
-      src="https://storage.googleapis.com/a1aa/image/446507d0-f65f-43df-f728-e95b634fcd6c.jpg"
-      style="mix-blend-mode: multiply;"
-      width="600"
-    />
-    <div
-      class="relative max-w-7xl mx-auto px-6 py-12 sm:py-16 lg:py-20 grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
-    >
-      <div>
-        <h2
-          class="text-white font-extrabold text-xl sm:text-2xl md:text-3xl max-w-xl leading-tight"
-        >
-          Why Invest in Khaas Food?
-        </h2>
-        <ul class="mt-6 space-y-3 max-w-xl text-gray-300 text-sm sm:text-base">
-          <li class="flex items-start">
-            <i class="fas fa-check fa-xs mt-1 mr-2 text-white"></i>
-            <span>Halal Investment – Ethical, Shariah-compliant opportunities</span>
-          </li>
-          <li class="flex items-start">
-            <i class="fas fa-check fa-xs mt-1 mr-2 text-white"></i>
-            <span>Safe Food Market Leader – Strong consumer trust & demand</span>
-          </li>
-          <li class="flex items-start">
-            <i class="fas fa-check fa-xs mt-1 mr-2 text-white"></i>
-            <span>High Growth Potential – Up to 25% ROI on selected investments</span>
-          </li>
-          <li class="flex items-start">
-            <i class="fas fa-check fa-xs mt-1 mr-2 text-white"></i>
-            <span
-              >Sustainable & Zero-Emission Agro Processing Hub – The future of food
-              production</span
-            >
-          </li>
-        </ul>
-      </div>
-      <div class="flex justify-end md:justify-end mt-6 md:mt-0">
-        <button
-          class="inline-flex items-center space-x-2 rounded-full bg-gradient-to-r from-[#6DD5FA] to-[#A7E9F7] px-6 py-2 text-white text-sm sm:text-base font-medium hover:brightness-110 transition"
-          type="button"
-        >
-          <i class="fas fa-mouse-pointer text-white"></i>
-          <span>Express Interest to Invest</span>
-        </button>
-      </div>
+<section class="relative bg-[#00303F] overflow-hidden">
+  <!-- Background image -->
+  <img
+    src="https://storage.googleapis.com/a1aa/image/446507d0-f65f-43df-f728-e95b634fcd6c.jpg"
+    alt="Green world map background image"
+    aria-hidden="true"
+    class="absolute inset-0 w-full h-full object-cover opacity-30"
+    style="mix-blend-mode: multiply;"/>
+
+  <!-- Content wrapper -->
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16 lg:py-20 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+    <!-- Text content -->
+    <div>
+      <h2 class="text-white font-extrabold text-2xl sm:text-3xl md:text-4xl leading-tight">
+        Why Invest in Khaas Food?
+      </h2>
+
+      <ul class="mt-6 space-y-4 text-gray-300 text-sm sm:text-base">
+        <li class="flex items-start">
+          <i class="fas fa-check fa-xs mt-1 mr-3 text-white"></i>
+          <span>Halal Investment – Ethical, Shariah-compliant opportunities</span>
+        </li>
+        <li class="flex items-start">
+          <i class="fas fa-check fa-xs mt-1 mr-3 text-white"></i>
+          <span>Safe Food Market Leader – Strong consumer trust & demand</span>
+        </li>
+        <li class="flex items-start">
+          <i class="fas fa-check fa-xs mt-1 mr-3 text-white"></i>
+          <span>High Growth Potential – Up to 25% ROI on selected investments</span>
+        </li>
+        <li class="flex items-start">
+          <i class="fas fa-check fa-xs mt-1 mr-3 text-white"></i>
+          <span>Sustainable & Zero-Emission Agro Processing Hub – The future of food production</span>
+        </li>
+      </ul>
     </div>
-  </section>
+
+    <!-- CTA Button -->
+    <div class="flex justify-center md:justify-end mt-8 md:mt-0">
+      <button
+        type="button"
+        class="inline-flex items-center space-x-2 rounded-full bg-gradient-to-r from-[#6DD5FA] to-[#A7E9F7] px-6 py-3 text-white text-sm sm:text-base font-medium hover:brightness-110 transition"
+      >
+        <i class="fas fa-mouse-pointer text-white"></i>
+        <span>Express Interest to Invest</span>
+      </button>
+    </div>
+  </div>
+</section>
+
 
 
     <section class="p-6">
@@ -171,9 +190,7 @@
 
       <div class="grid grid-cols-2 sm:grid-cols-3 gap-y-10 gap-x-20 w-full max-w-full text-left mb-8">
         <div class="flex items-center space-x-4">
-          <div
-            class="bg-[#00401a] text-white rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0"
-          >
+          <div class="bg-[#00401a] text-white rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0" >
             <i class="fas fa-shopping-cart text-lg"></i>
           </div>
          <style>
